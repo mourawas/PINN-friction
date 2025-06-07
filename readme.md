@@ -1,10 +1,10 @@
-# Physics-Informed Neural Network for LuGre Friction Modeling
+# Physics-Informed Neural Network for Friction Modeling & Parameter Discovery
 
-A PyTorch implementation of a Physics-Informed Neural Network (PINN) for modeling friction forces using the LuGre friction model.
+A PyTorch implementation of a Physics-Informed Neural Network (PINN) for friction
 
 ## Overview
 
-This PINN combines data-driven learning with the LuGre friction model physics to predict friction forces. The LuGre model, introduced by Canudas de Wit et al. (1995), captures complex friction phenomena including the Stribeck effect, hysteresis, and stick-slip behavior.
+This PINN combines data-driven learning with the LuGre friction model physics to predict friction forces. The LuGre model, introduced by Canudas de Wit et al. (1995), captures complex friction phenomena including the Stribeck effect, and stick-slip behavior.
 
 ## LuGre Model
 
@@ -43,7 +43,7 @@ Loads M4 (training) and M6 (test) datasets, trains the model, and generates plot
 ## Model Features
 
 - **Neural Network**: 3-layer network (64→128→128) with velocity, direction, and position inputs
-- **Bounded Parameters**: Six LuGre parameters (σ₀, σ₁, σ₂, Fc, Fs, vs) with physical constraints
+- **Learnable Parameters**: Six LuGre parameters (σ₀, σ₁, σ₂, Fc, Fs, vs) with physical constraints
 - **Combined Loss**: Weighted data fitting + physics residual loss
 - **Regularization**: Layer normalization, dropout, and weight decay
 
